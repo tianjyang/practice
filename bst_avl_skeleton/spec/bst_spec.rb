@@ -1,5 +1,6 @@
 require 'rspec'
 require 'bst'
+require 'byebug'
 
 describe BSTNode do
   let(:node) { BSTNode.new(7) }
@@ -52,7 +53,6 @@ describe BinarySearchTree do
           [4,2,9,9,10].each do |n|
             BinarySearchTree.insert!(node, n)
           end
-
           expect(node.left.value).to be(4)
           expect(node.left.left.value).to be(2)
           expect(node.right.value).to be(9)
